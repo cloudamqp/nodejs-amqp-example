@@ -1,0 +1,13 @@
+{
+  "author": "Carl Hörberg <carl.hoerberg@gmail.com>",
+  "name": "nodejs-amqp-example",
+  "description": "Example project showing how to use CloudAMQP with Node",
+  "version": "0.0.1",
+  "homepage": "http://www.cloudamqp.com",
+  "repository": {
+    "url": ""
+  },
+  "dependencies": { 
+    "amqp":">= 0.1.0"
+  }
+}
