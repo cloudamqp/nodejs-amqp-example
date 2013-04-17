@@ -13,5 +13,10 @@ function pub_and_sub() {
 }
 
 var url = process.env.CLOUDAMQP_URL || "amqp://localhost"; // default to localhost
-var conn = amqp.createConnection({url: url}); // create the connection
+var implOpts = {
+  reconnect: true,
+  reconnectBackoffStrategy: 'linear', // or 'exponential'
+  reconnectBackoffTime: 500, // ms
+};
+var conn = amqp.createConnection({ url: url }, implOpts); // create the connection
 conn.on('ready', pub_and_sub); // when connected, call "pub_and_sub"
