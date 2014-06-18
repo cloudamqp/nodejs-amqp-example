@@ -1,7 +1,6 @@
 var amqp = require('amqp'); 
 
 function pub_and_sub() {
-  var x = conn.exchange('');
   var queue = conn.queue('', {}, function(q) { // create a queue
     console.log(q.name);
     q.subscribe({ ack: false }, function(msg, headers, deliveryInfo, messageObject) { // subscribe to that queue
@@ -10,6 +9,7 @@ function pub_and_sub() {
     });
 
     for (var i = 0; i < 100000; i++) {
+      var x = conn.exchange('');
       x.publish(q.name, { body: 'Hello CloudAMQP!' }); 
     }
   });
