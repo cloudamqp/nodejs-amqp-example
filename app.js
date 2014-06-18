@@ -1,14 +1,17 @@
 var amqp = require('amqp'); 
 
 function pub_and_sub() {
-  var exchange = conn.exchange(''); // get the default exchange
-  var queue = conn.queue('queue1', {}, function() { // create a queue
-    queue.subscribe(function(msg) { // subscribe to that queue
-      console.log(msg.body); // print new messages to the console
+  var x = conn.exchange('');
+  var queue = conn.queue('', {}, function(q) { // create a queue
+    console.log(q.name);
+    q.subscribe({ ack: false }, function(msg, headers, deliveryInfo, messageObject) { // subscribe to that queue
+      //console.log(msg.body); // print new messages to the console
+      //messageObject.acknowledge(false);
     });
 
-    // publish a message
-    exchange.publish(queue.name, {body: 'Hello CloudAMQP!'}); 
+    for (var i = 0; i < 100000; i++) {
+      x.publish(q.name, { body: 'Hello CloudAMQP!' }); 
+    }
   });
 }
 
