@@ -7,7 +7,7 @@
   "repository": {
     "url": ""
   },
-  "dependencies": { 
-    "amqp":">= 0.1.6"
+  "dependencies": {
+    "amqp": ">= 0.1.6"
   }
 }
