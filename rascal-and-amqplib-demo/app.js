@@ -2,8 +2,6 @@ const amqplib = require('amqplib');
 const Broker = require('rascal').BrokerAsPromised;
 const config = require('./config.json');
 
-var assert = require('assert');
-
 var amqp_url = process.env.CLOUDAMQP_URL || 'amqp://localhost:5672';
 
 async function rascal_produce(){
