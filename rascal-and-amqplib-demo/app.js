@@ -58,7 +58,7 @@ async function rascal_consume(){
         subscription.cancel();
     });
     subscription.on('error', console.error);
-    subscription.on('invalid_content', (msg) =>{
+    subscription.on('invalid_content', (err, message, ackOrNack) =>{
       console.log('Failed to parse message');
     });
 }
