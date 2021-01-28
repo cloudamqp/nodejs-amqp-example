@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.5.6",
+    "amqplib": "^0.6.0",
     "rascal": "^10.0.1"
   }
 }
