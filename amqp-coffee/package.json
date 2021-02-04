@@ -1,0 +1,14 @@
+{
+  "name": "amqp-coffee-example",
+  "version": "1.0.0",
+  "description": "Example using amqp-coffee.",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqp-coffee": "^0.1.31"
+  }
+}
