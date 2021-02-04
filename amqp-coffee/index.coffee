@@ -1,4 +1,3 @@
-# index.coffee
 AMQP = require('amqp-coffee')
 
 # message to publish
