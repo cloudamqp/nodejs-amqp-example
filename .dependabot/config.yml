@@ -1,8 +1,0 @@
-version: 1
-update_configs:
-  - package_manager: "javascript"
-    directory: "/amqplib"
-    update_schedule: "live"
-  - package_manager: "javascript"
-    directory: "/rascal-and-amqplib-demo"
-    update_schedule: "live"
