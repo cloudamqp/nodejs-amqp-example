@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.5.6",
-    "rascal": "^10.0.1"
+    "rascal": "^13.0.4"
   }
 }
