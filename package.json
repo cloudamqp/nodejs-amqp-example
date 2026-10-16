@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-amqp-example",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.2"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@cloudamqp/amqp-client": "^4.1.1"
+  }
+}
