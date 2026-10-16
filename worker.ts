@@ -1,10 +1,15 @@
-import { connect } from "./amqp.js"
+import type { AMQPSession } from "@cloudamqp/amqp-client"
+import { connect } from "./amqp.ts"
 
 // The message is acked when the callback returns, and requeued if it throws
-export async function consume(session, queueName, handler) {
+export async function consume(
+  session: AMQPSession,
+  queueName: string,
+  handler: (message: string) => void | Promise<void>,
+) {
   const queue = await session.queue(queueName, { durable: true })
   return queue.subscribe({ prefetch: 10 }, async (msg) => {
-    await handler(msg.bodyString())
+    await handler(msg.bodyString() ?? "")
   })
 }
 

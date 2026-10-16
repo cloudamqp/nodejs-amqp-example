@@ -33,4 +33,5 @@ jobs:
       - name: Test
         run: |
           npm ci
+          npm run typecheck
           npm test
