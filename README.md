@@ -1,9 +1,6 @@
-# CloudAMQP with Node.js
+# nodejs-amqp-example
 
-Source code for the guides at https://www.cloudamqp.com/docs/nodejs.html.
+This repository is no longer in use and archived on Wed Oct 21 09:50:15 AM UTC 2026, last commit was 5071e7b.
 
-An alternative to the libraries shown in this repo, is the client developed by CloudAMQP:
+Last working version is available in the [archive](https://github.com/cloudamqp/nodejs-amqp-example/tree/archive) branch.
 
-* **[amqp-client.js]** – a client for Node.js and browsers
-
-[amqp-client.js]: https://github.com/cloudamqp/amqp-client.js#amqp-clientjs
